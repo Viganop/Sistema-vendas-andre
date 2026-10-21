@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Pedido</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
 </head>
 <body>
+<div th:replace="~{fragments/menu :: menu}"></div>
 <div class="container mt-5">
     <h2>Novo Pedido</h2>
     <form th:action="@{/pedidos/novo}" method="post">

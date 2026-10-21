@@ -8,6 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "redirect:/clientes";
+        // Pedidos é a área comum aos perfis ADMIN e PADRAO
+        return "redirect:/pedidos";
     }
 }

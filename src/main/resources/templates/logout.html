@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sair</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/menu :: menu}"></div>
+<div class="container mt-5" style="max-width: 420px;">
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <h2 class="mb-3">Sair do sistema</h2>
+            <p>Tem certeza que deseja sair?</p>
+
+            <!-- O POST /logout é processado pelo Spring Security e redireciona para /login?logout -->
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="btn btn-danger">Sair</button>
+                <a th:href="@{/}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

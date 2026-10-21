@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +12,7 @@
 </head>
 
 <body>
+<div th:replace="~{fragments/menu :: menu}"></div>
 
     <div class="container mt-5">
 
